@@ -10,4 +10,9 @@ public class HelloworldController {
 	public @ResponseBody String say(){
 		return "hello world";
 	}
+	
+	@RequestMapping("/say.html")
+	public @ResponseBody String say(String name){
+		return "hello world "+name;
+	}
 }
