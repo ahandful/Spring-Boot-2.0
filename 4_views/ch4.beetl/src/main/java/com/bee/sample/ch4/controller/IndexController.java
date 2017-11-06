@@ -16,4 +16,10 @@ public class IndexController {
 		view.addObject("name", "lijz");
 		return view;
 	}
+	
+	@RequestMapping("/test.do")
+	public ModelAndView  test(){
+		ModelAndView view = new ModelAndView("/test.html");
+		return view;
+	}
 }
