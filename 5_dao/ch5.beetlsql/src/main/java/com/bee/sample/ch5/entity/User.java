@@ -15,7 +15,6 @@ public class User   implements Serializable{
 	private String name ;
 	//创建时间
 	private Date createTime ;
-	private int temp = 0;
 	
 	public User() {
 	}

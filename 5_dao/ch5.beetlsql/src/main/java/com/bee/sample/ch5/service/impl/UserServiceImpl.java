@@ -13,7 +13,7 @@ import com.bee.sample.ch5.service.UserService;
 public class UserServiceImpl implements UserService {	
 	@Autowired 
 	UserDao userDao;
-	public User geUserById(Integer id) {
+	public User getUserById(Integer id) {
 		return userDao.unique(id);
 	}
 	@Override

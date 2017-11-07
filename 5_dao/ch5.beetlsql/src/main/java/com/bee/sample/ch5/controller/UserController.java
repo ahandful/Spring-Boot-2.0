@@ -16,7 +16,7 @@ public class UserController {
 	@Autowired UserService userService;
 	@RequestMapping("/user/{id}")
 	public @ResponseBody User say(@PathVariable Integer id){
-		User user= userService.geUserById(id);
+		User user= userService.getUserById(id);
 		
 		return user;
 	}
