@@ -14,3 +14,4 @@ CREATE TABLE `department` (
 
 
 INSERT INTO `user` VALUES (1, 'helo', 1, '2017-4-21 11:52:41');
+INSERT INTO `department` VALUES ('1', '研发部门');

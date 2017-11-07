@@ -11,3 +11,7 @@ CREATE TABLE `department` (
   `name` varchar(45) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+INSERT INTO `user` VALUES (1, 'helo', 1, '2017-4-21 11:52:41');
+INSERT INTO `department` VALUES ('1', '研发部门');
