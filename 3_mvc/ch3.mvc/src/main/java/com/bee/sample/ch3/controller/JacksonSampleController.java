@@ -41,9 +41,6 @@ public class JacksonSampleController {
 	public @ResponseBody Map now(){
 		Map map = new HashMap();
 		map.put("date", new Date());
-		if(1==1){
-			throw new RuntimeException("heo");
-		}
 		return map;
 	}
 	

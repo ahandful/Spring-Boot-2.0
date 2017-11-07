@@ -14,8 +14,8 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired UserDao userDao;
 	
-	public User geUserById(Integer id) {
-		Map map = userDao.findUserById2(id);
-		return null;
+	public User geUserById(Long id) {
+		User user = userDao.findUserById(id);
+		return user;
 	}
 }

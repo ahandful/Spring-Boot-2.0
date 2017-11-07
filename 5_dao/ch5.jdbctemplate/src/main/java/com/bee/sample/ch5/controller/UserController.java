@@ -13,7 +13,7 @@ import com.bee.sample.ch5.service.UserService;
 public class UserController {
 	@Autowired UserService userService;
 	@RequestMapping("/user/{id}")
-	public @ResponseBody User say(@PathVariable Integer id){
+	public @ResponseBody User say(@PathVariable Long id){
 		User user= userService.geUserById(id);
 		return user;
 	}

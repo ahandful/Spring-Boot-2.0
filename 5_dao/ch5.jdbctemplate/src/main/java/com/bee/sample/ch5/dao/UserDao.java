@@ -49,7 +49,7 @@ public class UserDao {
 				User user = new User();
 				user.setId(rs.getInt("id"));
 				user.setName(rs.getString("name"));
-				user.setDepartmentId(rs.getInt("department_ud"));
+				user.setDepartmentId(rs.getInt("department_id"));
 
 				return user;
 			}
@@ -100,7 +100,7 @@ public class UserDao {
 			User user = new User();
 			user.setId(rs.getInt("id"));
 			user.setName(rs.getString("name"));
-			user.setDepartmentId(rs.getInt("department_ud"));
+			user.setDepartmentId(rs.getInt("department_id"));
 			return user;
 		}
 
