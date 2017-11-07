@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnJava;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnJava.Range;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnJava.JavaVersion;
+import org.springframework.boot.system.JavaVersion;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 

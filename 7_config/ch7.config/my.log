@@ -1936,3 +1936,116 @@ INFO 2017-09-21 21:50:04,411 [XNIO-12 task-1]  o.s.w.s.DispatcherServlet.initSer
 INFO 2017-09-22 22:54:09,273 [Thread-70]  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose 989 :Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60deeac0: startup date [Thu Sep 21 21:49:54 CST 2017]; root of context hierarchy
 INFO 2017-09-22 22:54:09,291 [Thread-70]  o.s.j.e.a.AnnotationMBeanExporter.destroy 452 :Unregistering JMX-exposed beans on shutdown
 INFO 2017-09-22 22:54:09,294 [Thread-70]  io.undertow.servlet.log 360 :Destroying Spring FrameworkServlet 'dispatcherServlet'
+INFO 2017-11-07 09:21:15,494 [restartedMain]  c.b.s.c.Ch7Application.logStarting 48 :Starting Ch7Application on lijiazhi with PID 7588 (D:\git\Spring-Boot-2.0-Samples\7_config\ch7.config\target\classes started by Administrator in D:\git\Spring-Boot-2.0-Samples\7_config\ch7.config)
+DEBUG 2017-11-07 09:21:15,514 [restartedMain]  c.b.s.c.Ch7Application.logStarting 51 :Running with Spring Boot v2.0.0.M4, Spring v5.0.0.RC4
+INFO 2017-11-07 09:21:15,515 [restartedMain]  c.b.s.c.Ch7Application.logStartupProfileInfo 650 :No active profile set, falling back to default profiles: default
+INFO 2017-11-07 09:21:15,561 [restartedMain]  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh 589 :Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25e1be1c: startup date [Tue Nov 07 09:21:15 CST 2017]; root of context hierarchy
+INFO 2017-11-07 09:21:51,110 [restartedMain]  c.b.s.c.Ch7Application.logStarting 48 :Starting Ch7Application on lijiazhi with PID 8276 (D:\git\Spring-Boot-2.0-Samples\7_config\ch7.config\target\classes started by Administrator in D:\git\Spring-Boot-2.0-Samples\7_config\ch7.config)
+DEBUG 2017-11-07 09:21:51,111 [restartedMain]  c.b.s.c.Ch7Application.logStarting 51 :Running with Spring Boot v2.0.0.M6, Spring v5.0.1.RELEASE
+INFO 2017-11-07 09:21:51,112 [restartedMain]  c.b.s.c.Ch7Application.logStartupProfileInfo 651 :No active profile set, falling back to default profiles: default
+INFO 2017-11-07 09:21:51,149 [restartedMain]  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh 589 :Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@215e1b82: startup date [Tue Nov 07 09:21:51 CST 2017]; root of context hierarchy
+WARN 2017-11-07 09:21:51,249 [restartedMain]  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh 557 :Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [D:\git\Spring-Boot-2.0-Samples\7_config\ch7.config\target\classes\com\bee\sample\ch7\config\EnvConfig.class]; nested exception is java.lang.IllegalStateException: Error processing condition on com.bee.sample.ch7.config.EnvConfig
+ERROR 2017-11-07 09:21:51,253 [restartedMain]  o.s.b.f.s.DefaultListableBeanFactory.destroyBean 579 :Destroy method on bean with name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory' threw an exception
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@215e1b82: startup date [Tue Nov 07 09:21:51 CST 2017]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:420)
+	at org.springframework.context.support.ApplicationListenerDetector.postProcessBeforeDestruction(ApplicationListenerDetector.java:95)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:240)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:576)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:552)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:953)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:521)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:227)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:960)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1035)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:562)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:387)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233)
+	at com.bee.sample.ch7.Ch7Application.main(Ch7Application.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+ERROR 2017-11-07 09:21:51,258 [restartedMain]  o.s.b.SpringApplication.reportFailure 832 :Application startup failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: file [D:\git\Spring-Boot-2.0-Samples\7_config\ch7.config\target\classes\com\bee\sample\ch7\config\EnvConfig.class]; nested exception is java.lang.IllegalStateException: Error processing condition on com.bee.sample.ch7.config.EnvConfig
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:454)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:316)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:275)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:288)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:245)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:198)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:166)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:316)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:233)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:273)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:93)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:693)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:387)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1245)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1233)
+	at com.bee.sample.ch7.Ch7Application.main(Ch7Application.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Error processing condition on com.bee.sample.ch7.config.EnvConfig
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:64)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:109)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:88)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:71)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isConditionMatch(ClassPathScanningCandidateComponentProvider.java:515)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isCandidateComponent(ClassPathScanningCandidateComponentProvider.java:498)
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:431)
+	... 25 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at java.lang.Enum.compareTo(Unknown Source)
+	at org.springframework.boot.system.JavaVersion.isEqualOrNewerThan(JavaVersion.java:79)
+	at org.springframework.boot.autoconfigure.condition.OnJavaCondition.isWithin(OnJavaCondition.java:74)
+	at org.springframework.boot.autoconfigure.condition.OnJavaCondition.getMatchOutcome(OnJavaCondition.java:54)
+	at org.springframework.boot.autoconfigure.condition.OnJavaCondition.getMatchOutcome(OnJavaCondition.java:49)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 31 common frames omitted
+INFO 2017-11-07 09:27:50,443 [restartedMain]  c.b.s.c.Ch7Application.logStarting 48 :Starting Ch7Application on lijiazhi with PID 10204 (D:\git\Spring-Boot-2.0-Samples\7_config\ch7.config\target\classes started by Administrator in D:\git\Spring-Boot-2.0-Samples\7_config\ch7.config)
+DEBUG 2017-11-07 09:27:50,444 [restartedMain]  c.b.s.c.Ch7Application.logStarting 51 :Running with Spring Boot v2.0.0.M6, Spring v5.0.1.RELEASE
+INFO 2017-11-07 09:27:50,445 [restartedMain]  c.b.s.c.Ch7Application.logStartupProfileInfo 651 :No active profile set, falling back to default profiles: default
+INFO 2017-11-07 09:27:50,485 [restartedMain]  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh 589 :Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@215e1b82: startup date [Tue Nov 07 09:27:50 CST 2017]; root of context hierarchy
+INFO 2017-11-07 09:27:51,816 [restartedMain]  org.xnio.<clinit> 104 :XNIO version 3.3.8.Final
+INFO 2017-11-07 09:27:51,893 [restartedMain]  org.xnio.nio.<clinit> 55 :XNIO NIO Implementation Version 3.3.8.Final
+WARN 2017-11-07 09:27:51,969 [restartedMain]  i.u.websockets.jsr.handleDeployment 67 :UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+WARN 2017-11-07 09:27:51,969 [restartedMain]  i.u.websockets.jsr.handleDeployment 76 :UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+INFO 2017-11-07 09:27:51,993 [restartedMain]  io.undertow.servlet.log 360 :Initializing Spring embedded WebApplicationContext
+INFO 2017-11-07 09:27:51,993 [restartedMain]  o.s.w.c.ContextLoader.prepareWebApplicationContext 267 :Root WebApplicationContext: initialization completed in 1508 ms
+INFO 2017-11-07 09:27:52,089 [restartedMain]  o.s.b.w.s.ServletRegistrationBean.onStartup 191 :Mapping servlet: 'dispatcherServlet' to [/]
+INFO 2017-11-07 09:27:52,094 [restartedMain]  o.s.b.w.s.FilterRegistrationBean.configure 251 :Mapping filter: 'characterEncodingFilter' to: [/*]
+INFO 2017-11-07 09:27:52,095 [restartedMain]  o.s.b.w.s.FilterRegistrationBean.configure 251 :Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+INFO 2017-11-07 09:27:52,096 [restartedMain]  o.s.b.w.s.FilterRegistrationBean.configure 251 :Mapping filter: 'httpPutFormContentFilter' to: [/*]
+INFO 2017-11-07 09:27:52,096 [restartedMain]  o.s.b.w.s.FilterRegistrationBean.configure 251 :Mapping filter: 'requestContextFilter' to: [/*]
+INFO 2017-11-07 09:27:52,440 [restartedMain]  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache 568 :Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@215e1b82: startup date [Tue Nov 07 09:27:50 CST 2017]; root of context hierarchy
+INFO 2017-11-07 09:27:52,512 [restartedMain]  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register 549 :Mapped "{[/showvalue.html]}" onto public java.lang.String com.bee.sample.ch7.controller.PropertyController.value(int)
+INFO 2017-11-07 09:27:52,513 [restartedMain]  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register 549 :Mapped "{[/showserver.html]}" onto public java.lang.String com.bee.sample.ch7.controller.PropertyController.value()
+INFO 2017-11-07 09:27:52,513 [restartedMain]  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register 549 :Mapped "{[/showenv.html]}" onto public java.lang.String com.bee.sample.ch7.controller.PropertyController.env()
+INFO 2017-11-07 09:27:52,514 [restartedMain]  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register 549 :Mapped "{[/sayhello.html]}" onto public java.lang.String com.bee.sample.ch7.controller.PropertyController.say()
+INFO 2017-11-07 09:27:52,517 [restartedMain]  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register 549 :Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+INFO 2017-11-07 09:27:52,518 [restartedMain]  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register 549 :Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+INFO 2017-11-07 09:27:52,540 [restartedMain]  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler 373 :Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO 2017-11-07 09:27:52,541 [restartedMain]  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler 373 :Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO 2017-11-07 09:27:52,585 [restartedMain]  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler 373 :Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+INFO 2017-11-07 09:27:52,604 [restartedMain]  o.s.b.a.w.s.WebMvcAutoConfiguration$WelcomePageHandlerMapping.<init> 611 :Adding welcome page: Optional[class path resource [static/index.html]]
+INFO 2017-11-07 09:27:52,686 [restartedMain]  o.s.b.d.a.OptionalLiveReloadServer.startServer 57 :LiveReload server is running on port 35729
+INFO 2017-11-07 09:27:52,730 [restartedMain]  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated 434 :Registering beans for JMX exposure on startup
+INFO 2017-11-07 09:27:52,801 [restartedMain]  o.s.b.w.e.u.UndertowServletWebServer.start 159 :Undertow started on port(s) 9090 (http)
+INFO 2017-11-07 09:27:52,804 [restartedMain]  c.b.s.c.Ch7Application.logStarted 57 :Started Ch7Application in 2.654 seconds (JVM running for 3.059)
+INFO 2017-11-07 09:28:15,649 [XNIO-2 task-1]  io.undertow.servlet.log 360 :Initializing Spring FrameworkServlet 'dispatcherServlet'
+INFO 2017-11-07 09:28:15,649 [XNIO-2 task-1]  o.s.w.s.DispatcherServlet.initServletBean 494 :FrameworkServlet 'dispatcherServlet': initialization started
+INFO 2017-11-07 09:28:15,662 [XNIO-2 task-1]  o.s.w.s.DispatcherServlet.initServletBean 513 :FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+INFO 2017-11-07 09:28:15,682 [XNIO-2 task-1]  c.b.s.c.c.PropertyController.say 22 :acess
