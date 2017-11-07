@@ -12,17 +12,12 @@ import static org.mockito.Mockito.when;
 import java.io.IOException;
 import java.util.List;
 
-import javax.validation.constraints.AssertTrue;
-
-import org.beetl.sql.core.engine.PageQuery;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import com.bee.sample.ch9.service.CreditSystemService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CreditServiceMockTest {
@@ -76,7 +71,13 @@ public class CreditServiceMockTest {
 		// 创建mock对象
 		List list = mock(List.class);
 		doThrow(new UnsupportedOperationException("不支持clear方法调用")).when(list).clear();;
-		
+		try {
+			list.clear();
+			
+		}catch(UnsupportedOperationException x) {
+			return ;
+		}
+		Assert.fail();
 
 
 	}
