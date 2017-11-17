@@ -3,6 +3,7 @@ package com.bee.sample.ch17.conf;
 import javax.sql.DataSource;
 
 import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnEnabledEndpoint;
+import org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
 import org.springframework.boot.actuate.trace.InMemoryTraceRepository;
 import org.springframework.boot.actuate.trace.TraceRepository;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -15,7 +16,8 @@ import com.zaxxer.hikari.HikariDataSource;
  * @author xiandafu
  *
  */
-@Configuration
+//@Configuration
+@ManagementContextConfiguration
 public class AcutatorExtConfig {
 	@ConditionalOnMissingBean(TraceRepository.class)
 	@Bean
