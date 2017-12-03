@@ -3,6 +3,7 @@ package com.bee.sample.ch17.conf;
 import javax.sql.DataSource;
 
 import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnEnabledEndpoint;
+import org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
 import org.springframework.boot.actuate.trace.InMemoryTraceRepository;
 import org.springframework.boot.actuate.trace.TraceRepository;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -25,12 +26,14 @@ public class AcutatorExtConfig {
 		return httpTrace;
 	}
 	
+	/* spring boot 2.0.0.M6 可以用，2.0.0M7会有异常
 	@Bean
 	@ConditionalOnMissingBean
 	@ConditionalOnEnabledEndpoint
 	public HikariCPEndpoint testDataEndpoint(DataSource ds) {
 		return new HikariCPEndpoint((HikariDataSource)ds);
 	}
+	*/
 	
 	
 }

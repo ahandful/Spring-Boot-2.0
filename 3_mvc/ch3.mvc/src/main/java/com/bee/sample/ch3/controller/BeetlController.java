@@ -32,7 +32,7 @@ public class BeetlController {
 		ModelAndView view = new ModelAndView();
 		User user = userService.getUserById(id);
 		view.addObject("user",user);
-		view.setViewName("/test/userInfo.btl");
+		view.setViewName("/userInfo.btl");
 		return view;
 	}
 	

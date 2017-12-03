@@ -13,6 +13,13 @@ import com.zaxxer.hikari.HikariDataSource;
 
 public class DataSourceConf {
 	@Bean(name = "dataSource")
+	public DataSource devSource(Environment env) {
+		HikariDataSource  prod = getDataSource(env);
+		prod.setMaximumPoolSize(2);
+		return prod;
+		
+	}
+	@Bean(name = "dataSource")
 	@Profile("test")
 	public DataSource testDatasource(Environment env) {
 		HikariDataSource  test = getDataSource(env);	

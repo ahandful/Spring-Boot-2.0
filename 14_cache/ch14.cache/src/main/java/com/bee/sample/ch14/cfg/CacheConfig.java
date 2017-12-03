@@ -27,6 +27,11 @@ import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer
 import org.springframework.data.redis.serializer.RedisSerializationContext.SerializationPair;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+/**
+ * 支持一二级缓存，使得性能到达极致,
+ * @author xiandafu
+ *
+ */
 @Configuration
 public class CacheConfig {
 	// 定义一个redis 的频道，默认叫cache，用于pub/sub
@@ -37,7 +42,6 @@ public class CacheConfig {
 
 	@Bean
 	public TowLevelCacheManager cacheManager(RedisTemplate redisTemplate) {
-		System.out.println(this.getClass().getClassLoader());
 		
 	
 		RedisCacheWriter writer = RedisCacheWriter.lockingRedisCacheWriter(redisTemplate.getConnectionFactory());
@@ -130,7 +134,6 @@ public class CacheConfig {
 		public ValueWrapper get(Object key) {
 			ValueWrapper wrapper = (ValueWrapper) local.get(key);
 			if (wrapper != null) {
-				System.out.println(wrapper.get().getClass().getClassLoader());
 				return wrapper;
 			} else {
 				// 二级缓存取
@@ -138,10 +141,7 @@ public class CacheConfig {
 				if (wrapper != null) {
 					local.put(key, wrapper);
 				}
-				if (wrapper != null) {
-					System.out.println(wrapper.get().getClass().getClassLoader());
-				}
-
+				
 				return wrapper;
 			}
 

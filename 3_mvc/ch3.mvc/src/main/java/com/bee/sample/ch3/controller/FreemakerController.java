@@ -14,7 +14,11 @@ import com.bee.sample.ch3.service.UserService;
 public class FreemakerController {
 	
 	@Autowired UserService userService;
-	
+	/***
+	 * http://127.0.0.1:8080/freemarker//showuser.html?id=1
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("/showuser.html")
 	public ModelAndView showUserInfo(Long id){
 		ModelAndView view = new ModelAndView();

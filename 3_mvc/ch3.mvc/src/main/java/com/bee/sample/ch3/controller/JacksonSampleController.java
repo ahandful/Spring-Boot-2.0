@@ -77,21 +77,7 @@ public class JacksonSampleController {
 		
 	}
 	
-	@GetMapping("/config.json")
-	public @ResponseBody String config() throws JsonProcessingException {
-		
-//		//复制一个，以免影响默认的配置
-//		ObjectMapper newMapper = mapper.copy();
-//		newMapper.enable(SerializationFeature.INDENT_OUTPUT)
-//		.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-//		.setDateFormat(new SimpleDateFormat("yyyy年MM月dd日"))
-//		.enable(features)
-//		
-//		
-//		return str;
-		return "";
-		
-	}
+
 	
 @JsonIgnoreProperties ({"id","photo"})
 	public static class SamplePojo{

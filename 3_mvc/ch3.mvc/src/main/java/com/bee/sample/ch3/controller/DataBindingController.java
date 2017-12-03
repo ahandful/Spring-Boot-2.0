@@ -47,7 +47,11 @@ public class DataBindingController {
         });
     }
 	
-	
+	/**
+	 * http://127.0.0.1:8080/databind/date.json?d=2012-01-01
+	 * @param d
+	 * @return
+	 */
 	@RequestMapping("/date.json")
 	public @ResponseBody User printDate(Date d) {
 		System.out.println(d);
