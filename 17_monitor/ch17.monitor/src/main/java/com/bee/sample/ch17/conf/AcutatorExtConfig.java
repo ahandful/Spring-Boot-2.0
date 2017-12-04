@@ -26,14 +26,14 @@ public class AcutatorExtConfig {
 		return httpTrace;
 	}
 	
-	/* spring boot 2.0.0.M6 可以用，2.0.0M7会有异常
+	// spring boot 2.0.0.M6 可以用，2.0.0M7会有异常
 	@Bean
 	@ConditionalOnMissingBean
 	@ConditionalOnEnabledEndpoint
 	public HikariCPEndpoint testDataEndpoint(DataSource ds) {
 		return new HikariCPEndpoint((HikariDataSource)ds);
 	}
-	*/
+	
 	
 	
 }

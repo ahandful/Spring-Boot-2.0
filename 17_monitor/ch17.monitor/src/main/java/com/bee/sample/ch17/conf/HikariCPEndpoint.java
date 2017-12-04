@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
+import org.springframework.context.annotation.Bean;
 
 import com.zaxxer.hikari.HikariConfigMXBean;
 import com.zaxxer.hikari.HikariDataSource;
@@ -19,7 +20,7 @@ import com.zaxxer.hikari.HikariPoolMXBean;
  * @author lijiazhi
  *
  */
-@Endpoint(id = "hikariCP")
+@Endpoint(id = "hikari")
 public class HikariCPEndpoint {
 	HikariDataSource ds;
 	
