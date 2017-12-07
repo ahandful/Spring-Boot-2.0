@@ -20,6 +20,7 @@ import com.zaxxer.hikari.HikariPoolMXBean;
  * @author lijiazhi
  *
  */
+//hikariCP 这个名字在2.0.0.M7 下会有问题，去掉CP就好了，这是一个bug
 @Endpoint(id = "hikari")
 public class HikariCPEndpoint {
 	HikariDataSource ds;

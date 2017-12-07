@@ -2362,3 +2362,61 @@ Modify 'management.endpoint.hikariCP.cache.time-to-live' so that it conforms to 
 2017-12-04 09:12:36.721  INFO 8732 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2017-12-04 09:12:36.722  INFO 8732 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2017-12-04 09:12:36.736  INFO 8732 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2017-12-04 09:18:28.026  INFO 10280 --- [restartedMain] com.bee.sample.ch17.Ch17Application      : Starting Ch17Application on lijiazhi with PID 10280 (D:\git\Spring-Boot-2.0-Samples\17_monitor\ch17.monitor\target\classes started by Administrator in D:\git\Spring-Boot-2.0-Samples\17_monitor\ch17.monitor)
+2017-12-04 09:18:28.028  INFO 10280 --- [restartedMain] com.bee.sample.ch17.Ch17Application      : No active profile set, falling back to default profiles: default
+2017-12-04 09:18:28.080  INFO 10280 --- [restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1f9928c1: startup date [Mon Dec 04 09:18:28 CST 2017]; root of context hierarchy
+2017-12-04 09:18:29.435  INFO 10280 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d26de6d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-04 09:18:29.634  INFO 10280 --- [restartedMain] o.h.v.i.engine.ValidatorFactoryImpl      : HV000238: Temporal validation tolerance set to 0.
+2017-12-04 09:18:30.232  INFO 10280 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2017-12-04 09:18:30.242  INFO 10280 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-04 09:18:30.243  INFO 10280 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-04 09:18:30.257  INFO 10280 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;D:\Java\jdk1.8.0_73\bin;D:\apache\apache-maven-3.5.0\bin;d:\oracle\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\GNU\GnuPG\pub;D:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;D:\Program Files\Microsoft SQL Server\110\Tools\Binn\;D:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\ibm\gsk8\lib64;C:\Program Files (x86)\ibm\gsk8\lib;C:\Program Files\nodejs\;C:\Program Files\Docker Toolbox\;D:\Python27;D:\Python27\Scripts;D:\asciidoc\xmlproc\libxml2-2.7.8.win32\libxml2-2.7.8.win32\bin;D:\asciidoc\fop-2.1;F:\sonar\sonar-runner-dist-2.4\sonar-runner-2.4\bin;D:\gnuplot\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraCompare\;D:\Program Files\Git\bin;D:\apache\apache-ant-1.9.7\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\Windows\system32;;.]
+2017-12-04 09:18:30.867  INFO 10280 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-04 09:18:30.867  INFO 10280 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2787 ms
+2017-12-04 09:18:31.192  INFO 10280 --- [localhost-startStop-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all.html]}" onto public java.lang.String com.bee.sample.ch17.controller.OutofMemoryController.create()
+2017-12-04 09:18:31.193  INFO 10280 --- [localhost-startStop-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/borrow.html]}" onto public java.lang.String com.bee.sample.ch17.controller.OutofMemoryController.borrow()
+2017-12-04 09:18:31.196  INFO 10280 --- [localhost-startStop-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test.html]}" onto public java.lang.String com.bee.sample.ch17.controller.TestCrontroller.create() throws java.lang.Exception
+2017-12-04 09:18:31.198  INFO 10280 --- [localhost-startStop-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testsleep.html]}" onto public java.lang.String com.bee.sample.ch17.controller.TestCrontroller.sleepTest() throws java.lang.Exception
+2017-12-04 09:18:31.198  INFO 10280 --- [localhost-startStop-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/testloglevel.html]}" onto public java.lang.String com.bee.sample.ch17.controller.TestCrontroller.logLevelTest(java.lang.String) throws java.lang.Exception
+2017-12-04 09:18:31.204  INFO 10280 --- [localhost-startStop-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-04 09:18:31.205  INFO 10280 --- [localhost-startStop-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-04 09:18:31.255  INFO 10280 --- [localhost-startStop-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-04 09:18:31.255  INFO 10280 --- [localhost-startStop-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-04 09:18:31.279  INFO 10280 --- [localhost-startStop-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-04 09:18:31.350  INFO 10280 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-04 09:18:31.354  INFO 10280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMetricsFilter' to: [/*]
+2017-12-04 09:18:31.354  INFO 10280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-04 09:18:31.354  INFO 10280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-04 09:18:31.355  INFO 10280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-04 09:18:31.355  INFO 10280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-04 09:18:31.355  INFO 10280 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-12-04 09:18:31.404  INFO 10280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2017-12-04 09:18:31.645  INFO 10280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2017-12-04 09:18:31.821  INFO 10280 --- [restartedMain] o.h.v.i.engine.ValidatorFactoryImpl      : HV000238: Temporal validation tolerance set to 0.
+2017-12-04 09:18:31.898  INFO 10280 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1f9928c1: startup date [Mon Dec 04 09:18:28 CST 2017]; root of context hierarchy
+2017-12-04 09:18:32.138  WARN 10280 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jmxMBeanExporter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/jmx/JmxEndpointAutoConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.boot.context.properties.source.InvalidConfigurationPropertyNameException: Configuration property name 'management.endpoint.hikariCP.cache.time-to-live' is not valid
+2017-12-04 09:18:32.138  INFO 10280 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-12-04 09:18:32.140  INFO 10280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2017-12-04 09:18:32.146  INFO 10280 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2017-12-04 09:18:32.149  INFO 10280 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2017-12-04 09:18:32.170  INFO 10280 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2017-12-04 09:18:32.172 ERROR 10280 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Configuration property name 'management.endpoint.hikariCP.cache.time-to-live' is not valid:
+
+    Invalid characters: 'C', 'P'
+    Bean: jmxMBeanExporter
+    Reason: Canonical names should be kebab-case ('-' separated), lowercase alpha-numeric characters and must start with a letter
+
+Action:
+
+Modify 'management.endpoint.hikariCP.cache.time-to-live' so that it conforms to the canonical names requirements.
+
