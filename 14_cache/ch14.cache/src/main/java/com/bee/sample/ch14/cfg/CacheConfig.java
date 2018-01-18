@@ -47,7 +47,6 @@ public class CacheConfig {
 		RedisCacheWriter writer = RedisCacheWriter.lockingRedisCacheWriter(redisTemplate.getConnectionFactory());
 		SerializationPair pair = SerializationPair.fromSerializer(new JdkSerializationRedisSerializer(this.getClass().getClassLoader()));
 		RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig().serializeValuesWith(pair);
-		
 		TowLevelCacheManager cacheManager = new TowLevelCacheManager(redisTemplate,writer,config);
 		
 		return cacheManager;
