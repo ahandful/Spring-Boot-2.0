@@ -1,17 +1,13 @@
 package com.bee.sample.ch14.cfg;
 
 import java.io.UnsupportedEncodingException;
-import java.time.Duration;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.Cache;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Condition;
-import org.springframework.context.annotation.ConditionContext;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.data.redis.cache.RedisCache;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
@@ -20,12 +16,12 @@ import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializationContext.SerializationPair;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
  * 支持一二级缓存，使得性能到达极致,
@@ -38,17 +34,13 @@ public class CacheConfig {
 	@Value("${springext.cache.redis.topic:cache}")
 	String topicName;
 
-	
-
 	@Bean
-	public TowLevelCacheManager cacheManager(RedisTemplate redisTemplate) {
-		
+	public TwoLevelCacheManager cacheManager(StringRedisTemplate redisTemplate) {
 	
 		RedisCacheWriter writer = RedisCacheWriter.lockingRedisCacheWriter(redisTemplate.getConnectionFactory());
 		SerializationPair pair = SerializationPair.fromSerializer(new JdkSerializationRedisSerializer(this.getClass().getClassLoader()));
 		RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig().serializeValuesWith(pair);
-		TowLevelCacheManager cacheManager = new TowLevelCacheManager(redisTemplate,writer,config);
-		
+		TwoLevelCacheManager cacheManager = new TwoLevelCacheManager(redisTemplate,writer,config);
 		return cacheManager;
 	}
 
@@ -64,15 +56,17 @@ public class CacheConfig {
 	}
 
 	@Bean
-	MessageListenerAdapter listenerAdapter(final TowLevelCacheManager cacheManager) {
+	MessageListenerAdapter listenerAdapter(final TwoLevelCacheManager cacheManager) {
 		return new MessageListenerAdapter(new MessageListener() {
 
 			public void onMessage(Message message, byte[] pattern) {
 				byte[] bs = message.getChannel();
+				
 				try {
 					// Sub 一个消息，通知缓存管理器
 					String type = new String(bs, "UTF-8");
-					cacheManager.receiver(type);
+					String cacheName = new String(message.getBody(),"UTF-8");
+					cacheManager.receiver(cacheName);
 				} catch (UnsupportedEncodingException e) {
 					e.printStackTrace();
 					// 不可能出错，忽略
@@ -83,9 +77,9 @@ public class CacheConfig {
 		});
 	}
 
-	class TowLevelCacheManager extends RedisCacheManager {
+	class TwoLevelCacheManager extends RedisCacheManager {
 		RedisTemplate redisTemplate;
-		public TowLevelCacheManager(RedisTemplate redisTemplate,RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration) {
+		public TwoLevelCacheManager(RedisTemplate redisTemplate,RedisCacheWriter cacheWriter, RedisCacheConfiguration defaultCacheConfiguration) {
 			super(cacheWriter,defaultCacheConfiguration);
 			this.redisTemplate = redisTemplate;
 		}
@@ -112,9 +106,9 @@ public class CacheConfig {
 		// 本地缓存提供
 		ConcurrentHashMap<Object, Object> local = new ConcurrentHashMap<Object, Object>();
 		RedisCache redisCache;
-		TowLevelCacheManager cacheManager;
+		TwoLevelCacheManager cacheManager;
 
-		public RedisAndLocalCache(TowLevelCacheManager cacheManager, RedisCache redisCache) {
+		public RedisAndLocalCache(TwoLevelCacheManager cacheManager, RedisCache redisCache) {
 			this.redisCache = redisCache;
 			this.cacheManager = cacheManager;
 		}

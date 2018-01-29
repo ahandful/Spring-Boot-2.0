@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.boot.autoconfigure.cache.CacheManagerCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
@@ -20,27 +19,25 @@ import org.springframework.data.redis.serializer.RedisSerializationContext.Seria
  */
 //@Configuration
 public class RedisCacheManagerCustomizer {
-	@Bean
-	public CacheManagerCustomizer<RedisCacheManager> cacheManagerCustomizer() {
-	    return new CacheManagerCustomizer<RedisCacheManager>() {
-	        @Override
-	        public void customize(RedisCacheManager cacheManager) {
-		        	cacheManager.getCacheConfigurations().get("menu").entryTtl(Duration.ofMinutes(10));
-	        }
-	    };
-	}
-	
 //	@Bean
-//	public RedisCacheManager getRedisCacheManager(RedisConnectionFactory connectionFactory){
-//		RedisCacheWriter cacheWriter = RedisCacheWriter.lockingRedisCacheWriter(connectionFactory);
-//		ClassLoader loader = this.getClass().getClassLoader();
-//		
-//		JdkSerializationRedisSerializer jdkSerializer = new JdkSerializationRedisSerializer(loader);
-//		SerializationPair<Object> pair = SerializationPair.fromSerializer(jdkSerializer);
-//		RedisCacheConfiguration cacheConfig = RedisCacheConfiguration.defaultCacheConfig().serializeValuesWith(pair);
-//		RedisCacheManager cacheManager = new RedisCacheManager(cacheWriter, cacheConfig);
-//		
-//		return cacheManager;
-//	}
+	public RedisCacheManager getRedisCacheManager(RedisConnectionFactory factory){
+		RedisCacheWriter cacheWriter = RedisCacheWriter.lockingRedisCacheWriter(factory);
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		JdkSerializationRedisSerializer jdkSerializer = new JdkSerializationRedisSerializer(loader);
+		SerializationPair<Object> pair = SerializationPair.fromSerializer(jdkSerializer);
+		
+		RedisCacheConfiguration cacheConfig = RedisCacheConfiguration.defaultCacheConfig().serializeValuesWith(pair);
+		cacheConfig = cacheConfig.entryTtl(Duration.ofSeconds(3600));//设置所有的超时时间
+
+		//设置单个缓存的超时时间
+
+		Map<String, RedisCacheConfiguration> initialCacheConfigurations = new HashMap<>();
+		initialCacheConfigurations.put("user",cacheConfig.entryTtl(Duration.ofSeconds(10)));
+		
+		
+		RedisCacheManager cacheManager = new RedisCacheManager(cacheWriter, cacheConfig,initialCacheConfigurations);
+		
+		return cacheManager;
+	}
 	
 }
