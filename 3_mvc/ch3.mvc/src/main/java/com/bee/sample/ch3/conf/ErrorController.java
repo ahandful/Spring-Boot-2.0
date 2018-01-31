@@ -3,6 +3,7 @@ package com.bee.sample.ch3.conf;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.servlet.error.AbstractErrorController;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -42,6 +44,14 @@ public class ErrorController extends AbstractErrorController {
 		String message = (String)model.get("message");
 		//友好提示
 		String errorMessage = getErrorMessage(cause);
+		
+		String requestPath = (String)model.get("path");
+	
+		
+		//后台打印日志信息方方便查错
+		log.info(status+":"+message, cause);
+		log.info("requestPath"+":"+requestPath);
+		
 		//后台打印日志信息方方便查错
 		log.info(message, cause);		
 		response.setStatus(status);
