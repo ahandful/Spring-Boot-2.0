@@ -32,7 +32,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @author xiandafu
  *
  */
-@Configuration
+//@Configuration
 public class CacheConfig {
 	// 定义一个redis 的频道，默认叫cache，用于pub/sub
 	@Value("${springext.cache.redis.topic:cache}")

@@ -2,12 +2,15 @@ package com.bee.sample.ch5.conf;
 
 import javax.sql.DataSource;
 
+import org.beetl.sql.core.db.MySqlStyle;
 import org.beetl.sql.ext.spring4.BeetlSqlDataSource;
+import org.beetl.sql.ext.spring4.SqlManagerFactoryBean;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
+import com.ibeetl.starter.BeetlSqlCustomize;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
@@ -30,4 +33,16 @@ public class DataSourceConfig {
 		source.setMasterSource(dataSource);
 		return source;
 	}
+	
+//	@Bean
+//	public BeetlSqlCustomize beetlSqlCustomize() {
+//		return new BeetlSqlCustomize() {
+//			@Override
+//			public void customize(SqlManagerFactoryBean sqlManager) {
+//				sqlManager.setDbStyle(new MySqlStyle());
+//				
+//			}
+//			
+//		};
+//	}
 }
