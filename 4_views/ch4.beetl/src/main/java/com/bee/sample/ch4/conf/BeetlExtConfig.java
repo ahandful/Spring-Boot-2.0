@@ -11,10 +11,12 @@ import org.beetl.core.Tag;
 import org.beetl.core.TagFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.bee.sample.ch4.util.SimpleFunction;
 import com.bee.sample.ch4.util.SimpleTag;
+import com.ibeetl.starter.BeetlTemplateCustomize;
 
 @Configuration
 public class BeetlExtConfig  {
@@ -37,6 +39,13 @@ public class BeetlExtConfig  {
 		System.out.print("=================="+url);
 	}
 		
-	
+//		@Bean /*另外一种配置方法，实现BeetlTemplateCustomize*/
+//	  public BeetlTemplateCustomize beetlTemplateCustomize(){
+//	    return new BeetlTemplateCustomize(){
+//	      public void customize(GroupTemplate groupTemplate){
+//
+//	      }
+//	    };
+//	  }
 	
 }
