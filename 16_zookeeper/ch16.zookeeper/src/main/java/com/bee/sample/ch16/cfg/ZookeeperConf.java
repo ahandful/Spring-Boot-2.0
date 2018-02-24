@@ -44,8 +44,11 @@ public class ZookeeperConf {
 				if (type == CuratorEventType.WATCHED) {
 					WatchedEvent we = event.getWatchedEvent();
 					EventType et = we.getType();
-					log.info(et + ":" + we.getPath());
-					client.checkExists().watched().forPath(we.getPath());
+					if(we.getPath()!=null) {
+						log.info(et + ":" + we.getPath());
+						client.checkExists().watched().forPath(we.getPath());
+					}
+					
 				}
 			}
 
