@@ -7,6 +7,8 @@
 
 本书源码地址是：https://gitee.com/xiandafu/Spring-Boot-2.0-Samples
 
+依据本书技术栈实现的开发平台：https://gitee.com/xiandafu/springboot-plus
+
 ![](all.png)
 
 
