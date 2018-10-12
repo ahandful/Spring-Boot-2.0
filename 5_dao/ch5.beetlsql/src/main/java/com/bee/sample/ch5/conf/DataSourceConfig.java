@@ -34,15 +34,15 @@ public class DataSourceConfig {
 		return source;
 	}
 	
-//	@Bean
-//	public BeetlSqlCustomize beetlSqlCustomize() {
-//		return new BeetlSqlCustomize() {
-//			@Override
-//			public void customize(SqlManagerFactoryBean sqlManager) {
-//				sqlManager.setDbStyle(new MySqlStyle());
-//				
-//			}
-//			
-//		};
-//	}
+	@Bean
+	public BeetlSqlCustomize beetlSqlCustomize() {
+		return new BeetlSqlCustomize() {
+			@Override
+			public void customize(SqlManagerFactoryBean sqlManager) {
+				sqlManager.setDbStyle(new MySqlStyle());
+				
+			}
+			
+		};
+	}
 }

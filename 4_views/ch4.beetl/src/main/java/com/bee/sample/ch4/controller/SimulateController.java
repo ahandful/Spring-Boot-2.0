@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author xiandafu
  *
  */
-@Controller
+//@Controller
 public class SimulateController {
 	@Autowired
 	WebSimulate webSimulate;
