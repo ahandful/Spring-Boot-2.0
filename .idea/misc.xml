@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/5_dao/ch5.beetlsql" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/1_preface/ch1.helloword/pom.xml" />
+        <option value="$PROJECT_DIR$/2_env/ch2.aop/pom.xml" />
+        <option value="$PROJECT_DIR$/3_mvc/ch3.mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/5_dao/ch5.beetlsql/pom.xml" />
+        <option value="$PROJECT_DIR$/5_dao/ch5.jdbctemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/9_test/ch9.test/pom.xml" />
+        <option value="$PROJECT_DIR$/10_rest/ch10.rest/pom.xml" />
+        <option value="$PROJECT_DIR$/4_views/ch4.beetl/pom.xml" />
+        <option value="$PROJECT_DIR$/4_views/ch4.jackson/pom.xml" />
+        <option value="$PROJECT_DIR$/12_redis/ch12.redis/pom.xml" />
+        <option value="$PROJECT_DIR$/14_cache/ch14.cache/pom.xml" />
+        <option value="$PROJECT_DIR$/7_config/ch7.config/pom.xml" />
+        <option value="$PROJECT_DIR$/8_deploy/ch8.deploy/pom.xml" />
+        <option value="$PROJECT_DIR$/11_mongodb/ch11.mongodb/pom.xml" />
+        <option value="$PROJECT_DIR$/17_monitor/ch17.monitor/pom.xml" />
+        <option value="$PROJECT_DIR$/16_zookeeper/ch16.zookeeper/pom.xml" />
+        <option value="$PROJECT_DIR$/6_springdata/ch6.jpadata/pom.xml" />
+        <option value="$PROJECT_DIR$/13_elasticsearch/ch13.elastic/pom.xml" />
+        <option value="$PROJECT_DIR$/15_springsession/ch15.springsession/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

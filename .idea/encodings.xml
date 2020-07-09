@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/10_rest/ch10.rest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/11_mongodb/ch11.mongodb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/12_redis/ch12.redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/13_elasticsearch/ch13.elastic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/14_cache/ch14.cache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/15_springsession/ch15.springsession/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/17_monitor/ch17.monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1_preface/ch1.helloword/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_env/ch2.aop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/3_mvc/ch3.mvc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/4_views/ch4.beetl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/4_views/ch4.jackson/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5_dao/ch5.beetlsql/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5_dao/ch5.jdbctemplate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/6_springdata/ch6.jpadata/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/7_config/ch7.config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/8_deploy/ch8.deploy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/9_test/ch9.test/src/main/java" charset="UTF-8" />
+  </component>
+</project>

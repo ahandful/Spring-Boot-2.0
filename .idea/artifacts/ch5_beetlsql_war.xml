@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ch5.beetlsql:war">
+    <output-path>$PROJECT_DIR$/5_dao/ch5.beetlsql/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ch5.beetlsql</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ch5.beetlsql-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ch5.beetlsql:war exploded" />
+    </root>
+  </artifact>
+</component>

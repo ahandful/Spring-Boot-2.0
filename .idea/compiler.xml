@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ch14.cache" />
+        <module name="ch3.mvc" />
+        <module name="ch13.elastic" />
+        <module name="ch17.monitor" />
+        <module name="ch12.redis" />
+        <module name="ch8.deploy" />
+        <module name="ch2.aop" />
+        <module name="ch4.beetl" />
+        <module name="ch9.test" />
+        <module name="ch15.springsession" />
+        <module name="ch11.mongodb" />
+        <module name="ch7.config" />
+        <module name="ch4.jackson" />
+        <module name="ch6.jpadata" />
+        <module name="ch5.beetlsql" />
+        <module name="ch10.rest" />
+        <module name="ch5.jdbctemplate" />
+        <module name="ch16.zookeeper" />
+        <module name="ch1.helloworld" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch1.helloworld" target="1.8" />
+      <module name="ch10.rest" target="1.8" />
+      <module name="ch11.mongodb" target="1.8" />
+      <module name="ch12.redis" target="1.8" />
+      <module name="ch13.elastic" target="1.8" />
+      <module name="ch14.cache" target="1.8" />
+      <module name="ch15.springsession" target="1.8" />
+      <module name="ch16.zookeeper" target="1.8" />
+      <module name="ch17.monitor" target="1.8" />
+      <module name="ch2.aop" target="1.8" />
+      <module name="ch3.mvc" target="1.8" />
+      <module name="ch4.beetl" target="1.8" />
+      <module name="ch4.jackson" target="1.8" />
+      <module name="ch5.beetlsql" target="1.8" />
+      <module name="ch5.jdbctemplate" target="1.8" />
+      <module name="ch6.jpadata" target="1.8" />
+      <module name="ch7.config" target="1.8" />
+      <module name="ch8.deploy" target="1.8" />
+      <module name="ch9.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ch1.helloworld" options="-parameters" />
+      <module name="ch10.rest" options="-parameters" />
+      <module name="ch11.mongodb" options="-parameters" />
+      <module name="ch12.redis" options="-parameters" />
+      <module name="ch13.elastic" options="-parameters" />
+      <module name="ch14.cache" options="-parameters" />
+      <module name="ch15.springsession" options="-parameters" />
+      <module name="ch17.monitor" options="-parameters" />
+      <module name="ch2.aop" options="-parameters" />
+      <module name="ch3.mvc" options="-parameters" />
+      <module name="ch4.beetl" options="-parameters" />
+      <module name="ch4.jackson" options="-parameters" />
+      <module name="ch5.beetlsql" options="-parameters" />
+      <module name="ch5.jdbctemplate" options="-parameters" />
+      <module name="ch6.jpadata" options="-parameters" />
+      <module name="ch7.config" options="-parameters" />
+      <module name="ch8.deploy" options="-parameters" />
+      <module name="ch9.test" options="-parameters" />
+    </option>
+  </component>
+</project>
