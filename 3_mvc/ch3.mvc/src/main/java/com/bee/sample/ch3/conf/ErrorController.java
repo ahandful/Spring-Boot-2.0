@@ -40,6 +40,7 @@ public class ErrorController extends AbstractErrorController {
 				request, false));
 		Throwable cause =getCause(request);
 		int status =  (Integer)model.get("status");
+
 		//错误信息
 		String message = (String)model.get("message");
 		//友好提示
