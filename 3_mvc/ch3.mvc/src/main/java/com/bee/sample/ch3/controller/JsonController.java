@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.bee.sample.ch3.conf.SpringContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,8 +24,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RequestMapping("/json")
 public class JsonController {
 	@Autowired UserService userService;
-	
-	
+
 	
 	@GetMapping("/user/{id}.json")
 	public @ResponseBody User showUserInfo( @PathVariable Long id){
@@ -34,6 +34,7 @@ public class JsonController {
 	
 	@GetMapping("/now.json")
 	public @ResponseBody Map datetime(){
+		SpringContextHolder.applicationContext.getBean("getObjectMapper");
 		//JacksonConfig 配置了序列化日期
 		Map map = new HashMap();
 		map.put("time", new Date());

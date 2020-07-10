@@ -3,10 +3,7 @@ package com.bee.sample.ch3.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bee.sample.ch3.entity.User;
@@ -22,9 +19,11 @@ public class BeetlController {
 	@Autowired UserService userService;
 	
 	@RequestMapping("/index.html")
-	public  String say(Model model){
+	@ResponseBody
+	public String say(Model model){
 		model.addAttribute("name","hello,world");
-		return "/index.btl";
+		return "hello guy";
+//		return "/index.btl";
 	}
 	
 	@GetMapping("/showuser.html")
@@ -35,6 +34,4 @@ public class BeetlController {
 		view.setViewName("/userInfo.btl");
 		return view;
 	}
-	
-
 }

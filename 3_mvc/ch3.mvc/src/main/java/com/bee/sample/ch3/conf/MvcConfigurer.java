@@ -27,14 +27,14 @@ public class MvcConfigurer implements WebMvcConfigurer {
 	public void addCorsMappings(CorsRegistry registry) {
 	}
 	
-	public void addFormatters(FormatterRegistry registry) {
-		 registry.addFormatter(new DateFormatter("yyyy-MM-dd HH:mm:ss"));
-		
-	}
+//	public void addFormatters(FormatterRegistry registry) {
+//		 registry.addFormatter(new DateFormatter("yyyy-MM-dd HH:mm:ss"));
+//
+//	}
 
 
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/index.html").setViewName("/index.btl");
+		registry.addViewController("/index.html").setViewName("/addOrder.html");
 		registry.addRedirectViewController("/**/*.do", "/index.html");
 	}
 	

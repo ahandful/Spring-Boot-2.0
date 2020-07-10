@@ -36,7 +36,7 @@ public class JacksonSampleController {
 	Log log = LogFactory.getLog(JacksonSampleController.class);
 	//参考JacksonConf
 	@Autowired ObjectMapper mapper;
-	
+
 	@GetMapping("/now.json")
 	public @ResponseBody Map now(){
 		Map map = new HashMap();
@@ -51,6 +51,8 @@ public class JacksonSampleController {
 		
 		String name = node.get("name").asText();
 		int id = node.get("id").asInt();
+		int a=0;
+		int b=1/a;
 		return "name:"+name+",id:"+id;
 		
 	}

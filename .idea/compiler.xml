@@ -9,22 +9,23 @@
         <module name="ch14.cache" />
         <module name="ch3.mvc" />
         <module name="ch13.elastic" />
-        <module name="ch17.monitor" />
+        <module name="ch2.aop" />
         <module name="ch12.redis" />
         <module name="ch8.deploy" />
-        <module name="ch2.aop" />
+        <module name="ch11.mongodb" />
         <module name="ch4.beetl" />
         <module name="ch9.test" />
+        <module name="my-app" />
+        <module name="ch5.jdbctemplate" />
         <module name="ch15.springsession" />
-        <module name="ch11.mongodb" />
-        <module name="ch7.config" />
+        <module name="ch16.zookeeper" />
         <module name="ch4.jackson" />
-        <module name="ch6.jpadata" />
         <module name="ch5.beetlsql" />
         <module name="ch10.rest" />
-        <module name="ch5.jdbctemplate" />
-        <module name="ch16.zookeeper" />
+        <module name="ch7.config" />
         <module name="ch1.helloworld" />
+        <module name="ch17.monitor" />
+        <module name="ch6.jpadata" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -47,6 +48,7 @@
       <module name="ch7.config" target="1.8" />
       <module name="ch8.deploy" target="1.8" />
       <module name="ch9.test" target="1.8" />
+      <module name="my-app" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

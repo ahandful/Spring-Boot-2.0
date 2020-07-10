@@ -41,9 +41,8 @@ public class DataBindingController {
 			@Override
 			public void validate(Object target, Errors errors) {
 				WorkInfoForm form = (WorkInfoForm)target;
-				;
 			}
-        	
+
         });
     }
 	
@@ -62,7 +61,7 @@ public class DataBindingController {
 	
 	@ResponseBody
 	@RequestMapping("/addworkinfo.html")
-	public void addWorkInfo(@Validated({WorkInfoForm.Add.class}) WorkInfoForm workInfo,BindingResult result) {
+	public void addWorkInfo(@Validated({WorkInfoForm.Update.class}) WorkInfoForm workInfo,BindingResult result) {
 		if(result.hasErrors()){
 			
 			List<ObjectError>  list = result.getAllErrors();

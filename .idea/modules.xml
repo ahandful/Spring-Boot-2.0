@@ -22,6 +22,7 @@
       <module fileurl="file://$PROJECT_DIR$/7_config/ch7.config/ch7.config.iml" filepath="$PROJECT_DIR$/7_config/ch7.config/ch7.config.iml" />
       <module fileurl="file://$PROJECT_DIR$/8_deploy/ch8.deploy/ch8.deploy.iml" filepath="$PROJECT_DIR$/8_deploy/ch8.deploy/ch8.deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/9_test/ch9.test/ch9.test.iml" filepath="$PROJECT_DIR$/9_test/ch9.test/ch9.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2_test/my-app/my-app.iml" filepath="$PROJECT_DIR$/2_test/my-app/my-app.iml" />
     </modules>
   </component>
 </project>
